@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">  
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
   
@@ -13,15 +15,38 @@
 </head>
 <body>
 
-  IP Address Tracker
+  <div class="upper-bar">
+    <h1 class="upper-bar-title">IP Address Tracker</h1>
 
-  Search for any IP address or domain
+    <form class="search-bar">
+      <input class="search-bar-type" type="search" placeholder="Search for any IP address or domain"/>
+      <button class="submit-button" type="submit">
+        <img src="images/icon-arrow.svg" alt="arrow">
+        </button>
+    </form>
+  </div>
 
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
+  <div class="info-card">
+   
+  </div>
+
+  <div class="map">
+
+    
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
