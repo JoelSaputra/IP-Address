@@ -7,8 +7,9 @@ const locationElement = document.getElementById('partition-location');
 const timezoneElement = document.getElementById('partition-timezone');
 const ispElement = document.getElementById('partition-isp');
 
+
 async function getIPLocation(ipAddress = null){
-    let url = `https://geo.ipify.org/api/v2/country?apiKey=${API_KEY}`;
+    let url = `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}`;
 
     if(ipAddress && ipAddress.trim()!= ''){
         url += `&ipAddress=${ipAddress}`;
@@ -19,10 +20,25 @@ async function getIPLocation(ipAddress = null){
 
     ipAddressElement.textContent = data.ip;
     locationElement.textContent = `${data.location.city}, ${data.location.region} ${data.location.postalCode}`;
-    timezoneElement.textContent = `UTC -${data.location.timezone}`;
+    timezoneElement.textContent = `UTC${data.location.timezone}`;
     ispElement.textContent = data.isp;
 
 }
+
+searchButton.addEventListener("click", ()=> {
+    const searchTerm = searchInput.value.trim();
+    if(searchTerm === ''){
+        getIPLocation();
+    }
+
+    else{
+        getIPLocation(searchTerm);
+    }
+
+});
+
+await getIPLocation();
+
 
 
 

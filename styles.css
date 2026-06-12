@@ -103,8 +103,10 @@ body{
 
 .partition{
     margin-top: 20px;
-    margin-left: 35px;
+    margin-left: 18px;
     margin-right: 2px;
+    width: 60%;
+
 }
 
 .partition-title{
@@ -115,20 +117,19 @@ body{
     letter-spacing: 2px;
 }
 
+.partition-answer{
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    overflow-wrap: break-word;
+}
+
 .vertical-line-ip, .vertical-line-location, .vertical-line-timezone{
     border-left: 0.5px solid rgb(149, 149, 149);
     height: 75px;
     margin-top: 30px;
-    margin-left: 120px;
+    margin-left: 0;
     margin-right: 2px;
-}
-
-.vertical-line-location{
-    margin-left: 155px;
-}
-
-.vertical-line-timezone{
-    margin-left: 165px;
 }
 
 
