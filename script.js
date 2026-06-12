@@ -36,6 +36,21 @@ searchButton.addEventListener("click", ()=> {
     }
 
 });
+
+
+searchInput.addEventListener("keypress", (event)=>{
+    if(event.key === "Enter"){
+        const searchTerm = searchInput.value.trim();
+        if(searchTerm === ''){
+            getIPLocation();
+        }
+
+        else{
+            getIPLocation(searchTerm);
+        }
+    }
+
+});
  
 
 getIPLocation();
