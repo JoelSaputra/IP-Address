@@ -36,8 +36,9 @@ searchButton.addEventListener("click", ()=> {
     }
 
 });
+ 
 
-await getIPLocation();
+getIPLocation();
 
 
 
